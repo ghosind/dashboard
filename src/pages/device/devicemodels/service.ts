@@ -3,7 +3,7 @@ import request from "@/utils/request";
 // 列表
 export function getList(namespace: string) {
   return request(
-    `/apis/devices.kubeedge.io/v1alpha2${
+    `/apis/devices.kubeedge.io/v1beta1${
       namespace ? `/namespaces/${namespace}` : ""
     }/devicemodels`,
     {
@@ -13,7 +13,7 @@ export function getList(namespace: string) {
 }
 export function getListByQuery(namespaces: string, name: string) {
   return request(
-    `/apis/devices.kubeedge.io/v1alpha2/namespaces/${namespaces}/devicemodels/${name}`,
+    `/apis/devices.kubeedge.io/v1beta1/namespaces/${namespaces}/devicemodels/${name}`,
     {
       method: "get",
     }
@@ -29,7 +29,7 @@ export function getListByLabel(namespaces: string, formType: object) {
 // 删除
 export function removeItem(namespaces: string, app: string) {
   return request(
-    `/apis/devices.kubeedge.io/v1alpha2/namespaces/${namespaces}/devicemodels/${app}`,
+    `/apis/devices.kubeedge.io/v1beta1/namespaces/${namespaces}/devicemodels/${app}`,
     {
       method: "delete",
     }
@@ -38,7 +38,7 @@ export function removeItem(namespaces: string, app: string) {
 
 export function addItem(namespaces: string, obj: object) {
   return request(
-    `/apis/devices.kubeedge.io/v1alpha2/namespaces/${namespaces}/devicemodels`,
+    `/apis/devices.kubeedge.io/v1beta1/namespaces/${namespaces}/devicemodels`,
     {
       method: "post",
       data: obj,

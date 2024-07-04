@@ -4,7 +4,7 @@ import type { DeviceType } from "./data.d";
 // 列表
 export function getList(namespace: string) {
   return request(
-    `/apis/devices.kubeedge.io/v1alpha2${
+    `/apis/devices.kubeedge.io/v1beta1${
       namespace ? `/namespaces/${namespace}` : ""
     }/devices`,
     {
@@ -15,7 +15,7 @@ export function getList(namespace: string) {
 // 删除
 export function removeItem(namespaces: string, app: string) {
   return request(
-    `/apis/devices.kubeedge.io/v1alpha2/namespaces/${namespaces}/devices/${app}`,
+    `/apis/devices.kubeedge.io/v1beta1/namespaces/${namespaces}/devices/${app}`,
     {
       method: "delete",
     }
@@ -24,7 +24,7 @@ export function removeItem(namespaces: string, app: string) {
 // 获取详情
 export function getInfo(namespace: string, app: string) {
   return request(
-    `/apis/devices.kubeedge.io/v1alpha2${
+    `/apis/devices.kubeedge.io/v1beta1${
       namespace ? `/namespaces/${namespace}` : ""
     }/devices/${app}`,
     {
@@ -35,7 +35,7 @@ export function getInfo(namespace: string, app: string) {
 // 设备实例新增
 export async function addDevice(namespaces, params: DeviceType) {
   return request(
-    `/apis/devices.kubeedge.io/v1alpha2/namespaces/${namespaces}/devices`,
+    `/apis/devices.kubeedge.io/v1beta1/namespaces/${namespaces}/devices`,
     {
       method: "post",
       data: params,
@@ -46,7 +46,7 @@ export async function addDevice(namespaces, params: DeviceType) {
 // 设备模型列表
 export function getDevicemodelsList(namespace: string) {
   return request(
-    `/apis/devices.kubeedge.io/v1alpha2${
+    `/apis/devices.kubeedge.io/v1beta1${
       namespace ? `/namespaces/${namespace}` : ""
     }/devicemodels`,
     {

@@ -66,7 +66,7 @@ const DeptForm: React.FC<DeptFormProps> = (props) => {
   };
   const handleFinish = async (values: Record<string, any>) => {
     const params = {
-      apiVersion: "devices.kubeedge.io/v1alpha2",
+      apiVersion: "devices.kubeedge.io/v1beta1",
       kind: "Device",
       metadata: {
         labels: {

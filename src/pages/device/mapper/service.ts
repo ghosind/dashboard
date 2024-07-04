@@ -4,7 +4,7 @@ import type { DeptType } from "./data.d";
 // 列表
 export function getList(namespace: string) {
   return request(
-    `/apis/devices.kubeedge.io/v1alpha2${
+    `/apis/devices.kubeedge.io/v1beta1${
       namespace ? `/namespaces/${namespace}` : ""
     }/devices`,
     {

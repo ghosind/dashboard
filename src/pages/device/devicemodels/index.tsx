@@ -83,7 +83,7 @@ const typeOptions = {
 };
 const handleAdd = async (form: DeptFormValueType) => {
   const obj = {
-    apiVersion: "devices.kubeedge.io/v1alpha2",
+    apiVersion: "devices.kubeedge.io/v1beta1",
     kind: "DeviceModel",
     metadata: {
       name: form.name,
