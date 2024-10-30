@@ -82,6 +82,12 @@ const LoginPage = () => {
         >
           Edge Computing Open Platform
         </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{ color: 'rgba(0, 0, 0, 0.45)' }}
+        >
+          Netlify Deployment test for PR
+        </Typography>
       </Box>
 
       <TextField
